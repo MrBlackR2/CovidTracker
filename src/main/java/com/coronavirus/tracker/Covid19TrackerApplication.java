@@ -14,7 +14,8 @@ import com.coronavirus.tracker.parser.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootApplication
-public class Covid19TrackerApplication implements CommandLineRunner {
+public class Covid19TrackerApplication{
+//implements CommandLineRunner {
 	
 	private static final Logger logger = LogManager.getLogger(Covid19TrackerApplication.class); 
 	public static void main(String[] args) {
@@ -22,13 +23,13 @@ public class Covid19TrackerApplication implements CommandLineRunner {
 	}
 	
 	//@Bean
-	public void run(String[] args) throws Exception {
-		logger.info("This is the Mail Program After SpringBoot");
+	//public void run(String[] args) throws Exception {
+		//logger.info("This is the Mail Program After SpringBoot");
 		//JsonParser json = new JsonParser();
 		//json.readFile();
 		//ObjectMapper mapper = new ObjectMapper();
 		//CovidStatus jparser = mapper.readValue(new File("C://Users/rrajput/Downloads/Covid19-Tracker/src/main/resources/US.json"), CovidStatus.class);
 	
-	}
+	//}
 }
 

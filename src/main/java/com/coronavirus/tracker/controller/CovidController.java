@@ -21,6 +21,9 @@ class CovidController {
 	@Autowired
 	private CoronavirusServiceImp coronavirusServiceImp;
 	
+	@Autowired
+	private JsonParser jsonParser;
+	
 	@GetMapping("/getstatus/{covidId}")
 	public ResponseEntity<CovidStatus> DailyStatus(@PathVariable("covidId") int CovidId){
 		CovidStatus covidstatus = coronavirusServiceImp.getDailyCovidStatus(CovidId);
@@ -32,10 +35,9 @@ class CovidController {
 	}
 	
 	@PostMapping("/parse")
-	public ResponseEntity<CovidStatus> operation_Perf() throws IOException{
-		JsonParser json = new JsonParser();
-		json.readFile();
-		return null;
+	public String operation_Perf() throws IOException{
+		jsonParser.readFile();
+		return "success";
 	}
 	
 }

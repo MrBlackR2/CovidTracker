@@ -9,11 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Covid19")
+@Table(name = "CovidStatus")
 public class CovidStatus {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int covidId;
 	
 	@Column
@@ -52,7 +52,7 @@ public class CovidStatus {
 	public long getPositive() {
 		return positive;
 	}
-	public void setPostive(long positive) {
+	public void setPositive(long positive) {
 		this.positive = positive;
 	}
 	public long getNegative() {
